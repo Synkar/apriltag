@@ -177,3 +177,19 @@ endif(OpenCV_FOUND)
 
 # install example programs
 install(TARGETS apriltag_demo RUNTIME DESTINATION bin)
+
+set(CPACK_PACKAGE_NAME "apriltag")
+set(CPACK_PACKAGE_VERSION "3.3.0")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "AprilTag is a visual fiducial system popular for robotics research.")
+
+set(CPACK_GENERATOR "DEB")
+
+set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-Linux-x86_64.tgz")
+
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
+
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Jose Rafael <jose.rafael@synkar.com>")
+
+set (CPACK_DEBIAN_PACKAGE_DEPENDS "opencv (>= 4.5.5)")
+
+include(CPack)
