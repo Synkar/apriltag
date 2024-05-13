@@ -217,3 +217,19 @@ endif()
 if(BUILD_TESTING)
     add_subdirectory(test)
 endif()
+
+set(CPACK_PACKAGE_NAME "apriltag")
+set(CPACK_PACKAGE_VERSION "3.4.1")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "AprilTag is a visual fiducial system popular for robotics research.")
+
+set(CPACK_GENERATOR "DEB")
+
+set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-Linux-x86_64.tgz")
+
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
+
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Nigel Dias <nigel.dias@synkar.com>")
+
+set (CPACK_DEBIAN_PACKAGE_DEPENDS "opencv (>= 4.5.5)")
+
+include(CPack)
