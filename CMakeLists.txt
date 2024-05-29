@@ -230,6 +230,6 @@ set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Nigel Dias <nigel.dias@synkar.com>")
 
-set (CPACK_DEBIAN_PACKAGE_DEPENDS "opencv (>= 4.5.5)")
+set (CPACK_DEBIAN_PACKAGE_DEPENDS "libopencv-dev (>= 4.5.5)")
 
 include(CPack)
